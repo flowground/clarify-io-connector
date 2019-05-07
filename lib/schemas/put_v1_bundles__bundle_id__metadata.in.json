@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "bundle_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "description": "User-defined JSON data associated with the bundle. Must be valid JSON, up to 4000 characters.",
+                    "type": "string"
+                },
+                "version": {
+                    "description": "Object version.",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "data"
+            ]
+        }
+    }
+}

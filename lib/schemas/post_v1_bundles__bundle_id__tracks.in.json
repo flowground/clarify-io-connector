@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "properties": {
+        "bundle_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "label": {
+                    "description": "Label for the track. Up to 128 characters.",
+                    "type": "string"
+                },
+                "media_url": {
+                    "description": "URL of a media file for this bundle. Up to 2083 characters.",
+                    "type": "string"
+                },
+                "audio_channel": {
+                    "description": "The audio channel to use for the track ( \"\" | left | right ). Default is empty string which means all channels of audio in the media file are used for the track.",
+                    "type": "string",
+                    "enum": [
+                        "left",
+                        "right"
+                    ]
+                },
+                "audio_language": {
+                    "description": "Language of the audio in the track, specified with an RFC5646 code.",
+                    "type": "string",
+                    "enum": [
+                        "en-US",
+                        "en-UK",
+                        "es",
+                        "fr"
+                    ]
+                },
+                "start_time": {
+                    "description": "Time offset in seconds that the media starts relative to the bundle. Default is 0.",
+                    "type": "number"
+                },
+                "parts_pending": {
+                    "description": "Set to true if more media parts will be added to the track. Default is false.",
+                    "type": "boolean"
+                },
+                "track": {
+                    "description": "Track number specifies the index of the new track in the tracks array. An integer from 0 to 11. If not specified, the new track is appended to the array.",
+                    "type": "integer",
+                    "maximum": 11
+                },
+                "version": {
+                    "description": "Object version.",
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

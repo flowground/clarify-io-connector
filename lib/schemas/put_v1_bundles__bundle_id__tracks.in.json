@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "bundle_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "parts_complete": {
+                    "description": "Set to true if media parts in all tracks are complete. Default is false.",
+                    "type": "boolean"
+                },
+                "version": {
+                    "description": "Object version.",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "parts_complete"
+            ]
+        }
+    }
+}

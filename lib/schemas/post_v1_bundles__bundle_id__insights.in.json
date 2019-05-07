@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "bundle_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "insight": {
+                    "description": "name of the insight: transcript_r9, captions_r9, spoken_keywords, spoken_topics, spoken_words",
+                    "type": "string",
+                    "enum": [
+                        "transcript_r9",
+                        "captions_r9",
+                        "spoken_keywords",
+                        "spoken_topics",
+                        "spoken_words"
+                    ]
+                }
+            },
+            "required": [
+                "insight"
+            ]
+        }
+    }
+}

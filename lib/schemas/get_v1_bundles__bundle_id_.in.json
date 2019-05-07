@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "bundle_id": {
+            "required": true,
+            "type": "string"
+        },
+        "embed": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

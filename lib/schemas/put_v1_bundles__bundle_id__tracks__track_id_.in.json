@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "bundle_id": {
+            "required": true,
+            "type": "string"
+        },
+        "track_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "media_url": {
+                    "description": "URL of a media file for this bundle. Up to 2083 characters.",
+                    "type": "string"
+                },
+                "audio_channel": {
+                    "description": "The audio channel to use for the track ( \"\" | left | right ). Default is empty string which means all channels of audio in the media file are used for the track.",
+                    "type": "string",
+                    "enum": [
+                        "left",
+                        "right"
+                    ]
+                },
+                "audio_language": {
+                    "description": "Language of the audio in the track, specified with an RFC5646 code.",
+                    "type": "string",
+                    "enum": [
+                        "en-US",
+                        "en-UK",
+                        "es",
+                        "fr"
+                    ]
+                },
+                "start_time": {
+                    "description": "Time offset in seconds that the media starts relative to the bundle. Default is 0.",
+                    "type": "number"
+                },
+                "parts_pending": {
+                    "description": "Set to true if more media parts will be added to the track. Default is false.",
+                    "type": "boolean"
+                },
+                "version": {
+                    "description": "Object version.",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "media_url"
+            ]
+        }
+    }
+}

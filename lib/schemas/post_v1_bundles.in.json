@@ -1,0 +1,60 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of the bundle. Up to 128 characters.",
+                    "type": "string"
+                },
+                "media_url": {
+                    "description": "URL of a media (audio or video) file for this bundle. Up to 2083 characters.",
+                    "type": "string"
+                },
+                "audio_channel": {
+                    "description": "The audio channel to use for the track ( \"\" | left | right ). Default is empty string which means all channels of audio in the media file are used for the track.",
+                    "type": "string",
+                    "enum": [
+                        "left",
+                        "right"
+                    ]
+                },
+                "audio_language": {
+                    "description": "Language of the audio in the track, specified with an RFC5646 code.",
+                    "type": "string",
+                    "enum": [
+                        "en-US",
+                        "en-UK",
+                        "es",
+                        "fr"
+                    ]
+                },
+                "start_time": {
+                    "description": "Time offset in seconds that the media starts relative to the bundle. Default is 0.",
+                    "type": "number"
+                },
+                "parts_pending": {
+                    "description": "Set to true if more media parts will be added to the track. Default is false.",
+                    "type": "boolean"
+                },
+                "label": {
+                    "description": "Label for the track (if media_url is specified.) Up to 128 characters.",
+                    "type": "string"
+                },
+                "metadata": {
+                    "description": "User-defined JSON data associated with the bundle. Must be valid JSON, up to 4000 characters.",
+                    "type": "string"
+                },
+                "notify_url": {
+                    "description": "URL for notifications on this bundle. Up to 2083 characters.",
+                    "type": "string"
+                },
+                "external_id": {
+                    "description": "A string that can refer to an item in an external system. Up to 128 characters.",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

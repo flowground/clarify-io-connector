@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "interval": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "year",
+                "quarter",
+                "month",
+                "week",
+                "day",
+                "hour"
+            ]
+        },
+        "content": {
+            "required": false,
+            "type": "string"
+        },
+        "filter": {
+            "required": false,
+            "type": "string"
+        },
+        "language": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "en",
+                "en-UK",
+                "en-US",
+                "es",
+                "fr"
+            ]
+        }
+    }
+}

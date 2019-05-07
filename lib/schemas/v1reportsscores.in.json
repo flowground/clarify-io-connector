@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "interval": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "year",
+                "quarter",
+                "month",
+                "week",
+                "day",
+                "hour"
+            ]
+        },
+        "score_field": {
+            "required": true,
+            "type": "string"
+        },
+        "group_field": {
+            "required": true,
+            "type": "string"
+        },
+        "filter": {
+            "required": false,
+            "type": "string"
+        },
+        "language": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "en",
+                "en-UK",
+                "en-US",
+                "es",
+                "fr"
+            ]
+        }
+    }
+}

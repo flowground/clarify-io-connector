@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "bundle_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of the bundle. Up to 128 characters.",
+                    "type": "string"
+                },
+                "notify_url": {
+                    "description": "URL for notifications on this bundle. Up to 2083 characters.",
+                    "type": "string"
+                },
+                "external_id": {
+                    "description": "A string that can refer to an item in an external system. Up to 128 characters.",
+                    "type": "string"
+                },
+                "version": {
+                    "description": "Object version.",
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "bundle_id": {
+            "required": true,
+            "type": "string"
+        },
+        "insight_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

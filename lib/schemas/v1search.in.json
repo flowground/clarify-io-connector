@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "query": {
+            "required": false,
+            "type": "string"
+        },
+        "query_fields": {
+            "required": false,
+            "type": "string"
+        },
+        "filter": {
+            "required": false,
+            "type": "string"
+        },
+        "language": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "en",
+                "en-UK",
+                "en-US",
+                "es",
+                "fr"
+            ]
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+        },
+        "embed": {
+            "required": false,
+            "type": "string"
+        },
+        "iterator": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
